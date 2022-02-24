@@ -13,7 +13,12 @@ axios.post('http://api.vicgallenet:5000/docs', {
                 
 
                 stop_sequence: '\n',
-  })
+}
+  {
+                headers: {
+                    'Content-Type': 'application/json',
+                    
+                })
   .then(function (response) {
     console.log(response.body.text)
   })
