@@ -1,7 +1,7 @@
 const axios = require("axios")
 const prompt = 'My name is Albert Einstein. I am a theoretical physicist who developed the theory of relativity. /n'
 
-axios.post('http://api.vicgalle.net:5000/docs', {
+axios.post('http://api.vicgalle.net:5000/generate',{
     context: prompt,
 
                 temperature: 0.8,
