@@ -21,7 +21,7 @@ axios.post('http://api.vicgalle.net:5000/generate',{
                 }
 })
   .then(function (response) {
-    console.log(response.body.text)
+    console.log(response)
   })
   .catch(function (error) {
     console.log(error);
