@@ -1,7 +1,7 @@
 const axios = require("axios")
 const prompt = 'My name is Albert Einstein. I am a theoretical physicist who developed the theory of relativity. /n'
 const express = require('express')
-const bodyParser = require('body-parser');
+//const bodyParser = require('body-parser');
 const cors = require('cors');
 const app = express();
 const port = 3000;
@@ -10,8 +10,8 @@ const port = 3000;
 app.use(cors());
 
 // Configuring body parser middleware
-app.use(bodyParser.urlencoded({ extended: false }));
-app.use(bodyParser.json());
+app.use(express.urlencoded({ extended: false }));
+app.use(express.json());
 app.get('/', (req, res) => {
     axios.post('http://api.vicgalle.net:5000/generate',{
     context: prompt,
